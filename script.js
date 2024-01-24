@@ -55,7 +55,7 @@ function checkTheGuess(guess){
   }
 
   if(numberOfGuesses === 11 && (guess < randomNumGenerator || guess > randomNumGenerator)){
-    correctIncorrect.innerHTML = 'Incorrect!!!'
+    correctIncorrect.innerHTML = `You lost the game!!`
     remainingChance.innerHTML = `The right number was ${randomNumGenerator}`;
     lessMore.innerHTML = '';
     endGame();
