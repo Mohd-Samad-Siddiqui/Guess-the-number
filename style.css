@@ -53,6 +53,10 @@ button:hover {
   cursor: pointer;
 }
 
+#prevGuesses{
+  display: none;
+}
+
 #lastSection {
   font-size: 1.3rem;
   display: flex;

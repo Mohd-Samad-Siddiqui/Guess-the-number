@@ -1,6 +1,7 @@
 const form = document.querySelector('form');
 let userInput = document.querySelector('input');
 const button = document.querySelector('button');
+const prevGuesses = document.querySelector('#prevGuesses');
 let guessArray = document.querySelector('#guessArray');
 const answer = document.querySelector('#correctIncorrect');
 const remainingChance = document.querySelector('#remainingChance');
@@ -16,7 +17,7 @@ let randomNumGenerator = parseInt(Math.random() * 100 + 1);
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   let guess = userInput.value;
-
+  prevGuesses.style.display = 'block';
   if (remainingGuess >= 0) {
     guessValidate(guess);
   } else {
@@ -96,6 +97,7 @@ function startNewGame() {
     randomNumGenerator = parseInt(Math.random() * 100 + 1);
     numberOfGuesses = 1;
     remainingGuess = 10;
+    prevGuesses.style.display = 'none';
     newGame.style.display = 'none';
   })
 }
